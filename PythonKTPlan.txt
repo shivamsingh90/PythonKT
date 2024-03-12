@@ -1,0 +1,182 @@
+---- Python KT ----
+
+1. Introduction to Python
+	Basic syntax and indentation
+	Variables and data types
+	Operators and expressions
+	
+2. Control Structures
+    Conditional statements (if-else)
+	Loops (for, while)
+	Exception handling
+	
+3. Data Structures
+	Lists
+	Tuples
+	Dictionaries
+	Sets
+	
+4. Modules
+	Importing modules	
+	
+5. Functions
+    Defining functions
+	Parameters and arguments
+	Returning values
+
+6. File Handling
+	Reading from and writing to files
+	File modes and operations
+
+------------------------------------
+
+7. Logging
+	logger module
+
+8. Regular Expression
+    Pattern
+	Use in python
+		
+9. Advanced Topics
+	Decorators
+	Generators
+	
+10. Extras
+	Virtual environment and pip
+	Yaml, json and xml difference
+	Working with json
+	
+	
+=====================================================================================
+
+1. Introduction to Python
+
+	Addition: +
+	Subtraction: -
+	Multiplication: *
+	Division: /
+	Floor Division: //
+	Modulus (remainder): %
+	Exponentiation: **
+	
+	
+	AND: and
+	OR: or
+	NOT: not
+	
+=====================================================================================	
+
+2. Control Structures
+    Conditional statements (if-else)
+	Loops (for, while, for-else)
+	Exception handling
+	
+	-------------------------------------------------
+	
+	Comparisons:
+		Equal:            ==
+		Not Equal:        !=
+		Greater Than:     >
+		Less Than:        <
+		Greater or Equal: >=
+		Less or Equal:    <=
+		Object Identity:  is
+
+
+	False Values:
+		False
+		None
+		Zero of any numeric type
+		Any empty sequence. For example, '', (), [].
+		Any empty mapping. For example, {}.
+
+	condition = False
+
+	if condition:
+		print('Evaluated to True')
+	else:
+		print('Evaluated to False')
+		
+	x = [42, 43, 44]
+	y = [42, 43, 44]
+
+	print('== evaluation:', x == y)
+	print('is evaluation:', x is y)
+
+	print(id(x))
+	print(id(y))
+	
+	------------------------------------------------------
+	
+	employee = {'name': 'Akshay', 'age': 25, 'languages': ['Java', 'Python']}
+
+	for key, value in employee.items():
+		print(key, value)
+	
+		
+	nums = [1,2,3,4,5,6,7,8,9,10]
+
+	# I want 'n' for each 'n' in nums
+	my_list = []
+	for n in nums:
+	  my_list.append(n)
+	print my_list	
+	
+	-------------------------------------------------------
+	
+	def find_index(to_search, target):
+		for i, value in enumerate(to_search):
+			if value == target:
+				break
+		else:
+			return -1
+		return i
+
+
+	my_list = ['Manoj', 'Anjali', 'Sana', 'Akshay']
+	index_location = find_index(my_list, 'Hanish')
+
+	print(f'Location of target is index: {index_location}')
+
+	
+	----------------------------------------
+	
+	try:
+		result = 10 / 2
+	except ZeroDivisionError as e:
+		print("Error:", e)
+	except Exception as e:
+		print("An error occurred:", e)
+	else:
+		print("No exception occurred")
+	finally:
+		print("Finally block executed")
+
+
+=====================================================================================
+4. Modules
+	Importing modules
+	
+	
+	def my_function():
+		if some_condition:
+			import module_name
+		
+=====================================================================================	
+6. File Handling
+	Reading from and writing to files
+	File modes and operations
+	
+	f = open('example.txt', 'r')
+	data = f.read()
+	print(data)
+	f.close()
+
+	with open('example.txt', 'r') as file:
+		content = file.read()
+		print(content)
+
+	with open('example.txt', 'w') as file:
+		file.write("Some content")
+	
+=====================================================================================
